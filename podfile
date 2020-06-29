@@ -7,6 +7,6 @@ target 'LottieTest' do
 
   # Pods for LottieTest
 
-  pod 'lottie-ios'
+  pod 'lottie-ios','~> 2.5.2'
 
 end
