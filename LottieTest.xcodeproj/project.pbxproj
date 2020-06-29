@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CA1479537549C45F0BC965D /* Pods_LottieTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02870F60EF738B221B95E595 /* Pods_LottieTest.framework */; };
 		F9D44BAC24A9C3A50034F14A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D44BAB24A9C3A50034F14A /* AppDelegate.m */; };
 		F9D44BAF24A9C3A50034F14A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D44BAE24A9C3A50034F14A /* SceneDelegate.m */; };
 		F9D44BB224A9C3A50034F14A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D44BB124A9C3A50034F14A /* ViewController.m */; };
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02870F60EF738B221B95E595 /* Pods_LottieTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottieTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CEDECF4A8B5345B5C68A71D /* Pods-LottieTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieTest.debug.xcconfig"; path = "Target Support Files/Pods-LottieTest/Pods-LottieTest.debug.xcconfig"; sourceTree = "<group>"; };
+		EE119C45877082092F6BD120 /* Pods-LottieTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottieTest.release.xcconfig"; path = "Target Support Files/Pods-LottieTest/Pods-LottieTest.release.xcconfig"; sourceTree = "<group>"; };
 		F9D44BA724A9C3A50034F14A /* LottieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D44BAA24A9C3A50034F14A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F9D44BAB24A9C3A50034F14A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA1479537549C45F0BC965D /* Pods_LottieTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273150E1AF3D1CAE484A241A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CEDECF4A8B5345B5C68A71D /* Pods-LottieTest.debug.xcconfig */,
+				EE119C45877082092F6BD120 /* Pods-LottieTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7A6DC8C43B1541927EDCCB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02870F60EF738B221B95E595 /* Pods_LottieTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9D44B9E24A9C3A50034F14A = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +111,8 @@
 				F9D44BC524A9C3A70034F14A /* LottieTestTests */,
 				F9D44BD024A9C3A70034F14A /* LottieTestUITests */,
 				F9D44BA824A9C3A50034F14A /* Products */,
+				273150E1AF3D1CAE484A241A /* Pods */,
+				C7A6DC8C43B1541927EDCCB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9D44BD624A9C3A70034F14A /* Build configuration list for PBXNativeTarget "LottieTest" */;
 			buildPhases = (
+				CE1B050932D596BCE1666F5D /* [CP] Check Pods Manifest.lock */,
 				F9D44BA324A9C3A50034F14A /* Sources */,
 				F9D44BA424A9C3A50034F14A /* Frameworks */,
 				F9D44BA524A9C3A50034F14A /* Resources */,
+				E9C1A8537C400B0C23DFE5A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +288,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE1B050932D596BCE1666F5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottieTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C1A8537C400B0C23DFE5A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottieTest/Pods-LottieTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottieTest/Pods-LottieTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottieTest/Pods-LottieTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F9D44BA324A9C3A50034F14A /* Sources */ = {
@@ -437,6 +506,7 @@
 		};
 		F9D44BD724A9C3A70034F14A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEDECF4A8B5345B5C68A71D /* Pods-LottieTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +524,7 @@
 		};
 		F9D44BD824A9C3A70034F14A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE119C45877082092F6BD120 /* Pods-LottieTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
